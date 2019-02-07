@@ -36,7 +36,7 @@ class APIController extends Controller
             ->header('Content-Type', 'application/json');
     }
 
-    public function CadatraCliente(Request $data){
+    public function CadastraCliente(Request $data){
 
         $clientes = Clientes::create([
             'nome' => $data->nome,
