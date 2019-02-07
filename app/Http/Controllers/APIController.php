@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 class APIController extends Controller
 {
+    public function __construct(){
+        $this->middleware('jwt.auth');
+    }
+
     public function ListaUsuario(){
         $json = [
             'usuario' => [

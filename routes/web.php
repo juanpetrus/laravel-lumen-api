@@ -15,6 +15,10 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
+
+$router->post('auth/login', 'AuthController@autenticate');
+
+
 $router->get('/lista', 'APIController@ListaUsuario');
 
 $router->get('/clientes', 'APIController@ListaClientes');
