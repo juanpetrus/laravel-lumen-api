@@ -17,4 +17,8 @@ $router->get('/', function () use ($router) {
 
 $router->get('/lista', 'APIController@ListaUsuario');
 
-$router->get('/lista-clientes', 'APIController@ListaClientes');
+$router->get('/clientes', 'APIController@ListaClientes');
+$router->get('/clientes/{id}', 'APIController@ListaCliente');
+$router->post('/clientes', 'APIController@CadastraCliente');
+$router->delete('/clientes/{id}', 'APIController@DeleteCliente');
+$router->put('/clientes', 'APIController@AlterarCliente');
