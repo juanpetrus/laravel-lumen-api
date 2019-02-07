@@ -10,6 +10,8 @@ class Clientes extends Model
 
     protected $fillable = [
         'nome',
-        'cnpj'
+        'cnpj',
+        'created_at',
+        'updated_at'
     ];
 }

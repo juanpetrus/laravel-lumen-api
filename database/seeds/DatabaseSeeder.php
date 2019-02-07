@@ -11,6 +11,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call('UsersTableSeeder');
+        $faker = Faker\Factory::create();
+
+        for($i = 0; $i <= 1000; $i++){
+            App\Clientes::create([
+                'nome' => $faker->name,
+                'cnpj' => $faker->numberBetween(00000000001, 99999999999)
+            ]);
+            echo "Registro (". $i .") Cadastrado". "\n";
+        }
     }
 }

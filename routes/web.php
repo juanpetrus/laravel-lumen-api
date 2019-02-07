@@ -16,3 +16,5 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/lista', 'APIController@ListaUsuario');
+
+$router->get('/lista-clientes', 'APIController@ListaClientes');

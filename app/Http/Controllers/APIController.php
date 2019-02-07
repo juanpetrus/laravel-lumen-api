@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Clientes;
 use Illuminate\Http\Request;
 
 class APIController extends Controller
@@ -18,6 +18,13 @@ class APIController extends Controller
             ]
         ];
 
-        return response($json, 201)->header('Content-Type', 'application/json');
+        return response($json, 201)
+            ->header('Content-Type', 'application/json');
+    }
+
+    public function ListaClientes(){
+        $clientes = Clientes::All();
+        return response($clientes, 201)
+            ->header('Content-Type', 'application/json');
     }
 }
